@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color: #39393A;
+    min-height: 100vh;
+}
+
+#cabeca {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #f5f5f5;
+}
+
+.esquerda {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 10px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #b2ddf7;
+}
+
+.form-center {
+    position: initial;
+    min-height: 100vh;
+}
+
+#central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+#digite{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #b2ddf7;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#buscaFilme {
+    width: 450px;
+    height: 50px;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    border-bottom-right-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+}
+
+#botao {
+    border: 0;
+    width: 112px;
+    height: 53px;
+    font-size: 15px;
+    font-family: arial;
+    background-color: #b2ddf7;
+    text-decoration-color: #39393A;
+    font-weight: bold;
+}
