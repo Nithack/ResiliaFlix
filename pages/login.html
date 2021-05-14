@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <title>ResíliaFlix</title>
@@ -16,41 +18,339 @@
 
 
 
-    <header style="background-color: #111">
-
-        <!-- .container de alinhamento p/ header -->
-
-      <div class="container-fuid d-flex justify-content-between align-items-center">
-
-        <!-- logo -->
-
-        <img src="ResiliaflixLogo - Blue.svg" alt="" style="width: 230px; margin-left: 45px;">
-
-        <nav>
-
-          <ul class="list-unstyled d-flex">
-
-            <!-- Seta de voltar -->
-
-            <li><a href="#"><img src="left-arrow-64px.png" alt="" style="width: 35px; height: 35px; margin: 18px 45px 0 0;"></style></a></li>
-
-          </ul>
-
-        </nav>
-
-      </div>
-
-    </header>
-
-    <!-- Conteúdo do formulário -->
-
-    <section class="container-fluid bg-dark" style="width: 100%; height: calc(100vh - 69px);">
-
-    </section>
 
 
-    
+
+
+<!-- Estilização -->
+<style>
+
+/* Definindo padrão bg-dark do BTS para #1b1b1b */
+body, .bg-dark {
+  background-color: #212529!important; 
+  font-family: 'Poppins', sans-serif;
+}
+
+/* O HEADER COMEÇA AQUI */
+/* Zerando configurações padrão do BTS no botão hamburguer */
+
+.btnMenu {
+  border: none!important;
+  -webkit-appearance: none!important;
+  -ms-appearance: none!important;
+  -moz-appearance: none!important;
+  appearance: none!important;
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1000;
+  max-height: 80px;
+  padding: 0 5px;
+}
+
+.navBrand {
+  flex-grow: 1;
+}
+
+.logo {
+  width: 130px;
+  height: 80px;
+}
+
+.navbar img {
+  padding: 1px;
+}
+
+.navbar .buttonList {
+  color: #fff;
+  max-width: 300px;
+  max-height: 300px;
+  background-color: #00000000;
+  position: absolute;
+  top: 80px;
+  left: -250px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  transition: all 0.5s ease-in-out;
+  opacity: .5;
+}
+
+.navbar.sidebar-open .buttonList {
+  left: -20px;
+  opacity: 1;
+  width: 250px;
+}
+
+.navbar .buttonList li {
+  padding: 0.4em 0.4em;
+  margin: 0 0 0 28px;
+  cursor: pointer;
+}
+.navbar ul li a {
+  text-decoration: none!important;
+}
+.navbar ul li:hover {
+  color: #B2DDF7;
+}
+
+.flexList {
+  display: none;
+}
+
+#icon {
+  margin: 0 5px 5px 0;
+  padding: 2px;
+}
+
+.searchAndProfile {
+  display: flex!important;
+  }
+
+  #profile {
+    margin: 0 0 0 10px;
+  }
+
+/* O HEADER TEMRINA AQUI */
+
+/* EFFECT FORM ---------- COPIAR O INPUT A PARTIR DAQUI */
+
+/* *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.custom-field {
+  position: relative;
+  font-size: 14px;
+  margin: 0 14px 0 0;
+}
+.custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 4px;
+  max-width: 120px;
+  outline: none;
+  font-size: 14px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  max-height: 3px;
+  max-width: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(128, 128, 128, 0.596);
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.custom-field input.dirty + .placeholder,
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+  top: 10px;
+  font-size: 10px;
+  color: #B2DDF7;
+}
+
+.custom-field.one input {
+  background: none;
+  border: 2px solid rgba(128, 128, 128, 0.336);
+  transition: border-color 0.3s ease;
+  color: #B2DDF7;
+}
+
+.custom-field.one input + .placeholder {
+  left: 10px;
+  padding: 0 10px 23px 7px;
+}
+
+.custom-field.one input.dirty,
+.custom-field.one input:valid,
+.custom-field.one input:focus {
+  border-color: #B2DDF7;
+  transition-delay: 0.1s;
+}
+
+.custom-field.one input.dirty + .placeholder,
+.custom-field.one input:valid + .placeholder,
+.custom-field.one input:focus + .placeholder {
+  top: 1px;
+  font-size: 14px;
+  color: #B2DDF7;
+  background: #212529;
+} */
+
+/* ATÉ AQUI */
+
+@media (min-width: 576px) {
+
+  .logo {
+    width: 190px;
+    height: 80px;
+  }
+
+  .custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 7px;
+  max-width: 190px;
+  outline: none;
+  font-size: 14px;
+  }
+
+  .navbar .buttonList li {
+  padding: 0.8em 0.4em;
+  margin: 0 0 0 28px;
+  cursor: pointer;
+
+}
+}
+
+@media (min-width: 769px){
+  .btnMenu {
+    display: none;
+  }
+
+  .navBrand {
+  flex-grow: 0;
+}
+
+  .navbar .buttonList li {
+  padding: 0.8em 0.4em;
+  margin: 0 0 0 28px;
+  cursor: pointer;
+  display: none;
+
+}
+
+  .custom-field {
+  display: none;
+}
+
+  .flexList {
+    width: 280px;
+    display: flex;
+    margin: 0 0 0 0;  
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+  }
   
+  .searchAndProfile {
+  display: flex!important;
+  }
+
+  #profile {
+    margin: 0 0 0 30px;
+  }
+}
+
+
+@media (min-width: 1200px){
+  .logo {
+    width: 250px;
+    height: 100px;
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+<!-- HTML -->
+
+<div class="container-fluid">
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+
+    <button type="button" class="navbar-toggler btnMenu">
+      <img src="align-left.png" alt="Menu" height="30px" width="32px">
+    </button>
+
+    <a href="#" class="navbar-brand navBrand">
+      <img src="ResiliaflixLogo - Blue.png" class='logo' alt="Logo">
+    </a>
+
+    <!-- ESTRUTURA HTML DOS INPUTS -->
+
+    <!-- <label class="custom-field one">
+      <input type="text" required/>
+      <span class="placeholder">Busca</span>
+    </label> -->
+
+    <ul class="list-unstyled font-weight-bold buttonList">
+
+      <li><a href="#" class="text-reset"><img src="home.png"  id='icon' width="23px" height="23px">Home</a></li>
+      <li><a href="#" class="text-reset"><img src="play.png"  id='icon' width="23px" height="23px">Filmes</a></li>
+      <li><a href="#" class="text-reset"><img src="information.png"  id='icon' width="23px" height="23px">Sobre</a></li>
+      <li><a href="#" class="text-reset"><img src="phone-call.png"  id='icon' width="23px" height="23px">Contato</a></li>
+  
+    </ul>
+
+    <ul class="list-unstyled font-weight-bold flexList flex-grow-1">
+
+      <li><a href="#" class="text-reset"><img src="home.png"  id='icon' width="23px" height="23px">Home</a></li>
+      <li><a href="#" class="text-reset"><img src="play.png"  id='icon' width="23px" height="23px">Filmes</a></li>
+      <li><a href="#" class="text-reset"><img src="information.png"  id='icon' width="23px" height="23px">Sobre</a></li>
+      <li><a href="#" class="text-reset"><img src="phone-call.png"  id='icon' width="23px" height="23px">Contato</a></li>
+    </ul>
+
+      <ul class="navbar-nav flex-grow-2 searchAndProfile d-flex flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="loupe.png" id='icon' width="33px" height="33px"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id ='profile' href="#"><img src="user.png" id='icon' width="30px" height="30px"></a>
+        </li>
+      </ul>
+
+  </nav>
+
+
+
+
+
+
+
+
+
+<!-- NÃO ESQUEÇAM DO JAVA SCRIPT DO BOTÃO HAMBURGUER ! COMEÇA AQUI -->
+
+  <script>
+
+    // Comando para fazer a lista aparecer no sideBar
+
+    const btn = document.querySelector ('.navbar-toggler');
+    const navbar = document.querySelector ('.navbar');
+
+    btn.addEventListener('click', e => {
+
+      navbar.classList.toggle('sidebar-open');
+
+    })
+
+  </script>
+
+<!-- SCRIPT DO BOTÃO HAMBURGUER TERMINA AQUI -->
+
 
 
 
@@ -67,4 +367,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
     -->
   </body>
+
 </html>
