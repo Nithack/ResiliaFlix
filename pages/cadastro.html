@@ -51,7 +51,7 @@ body, .btn-outline-info {
   border: solid 2px rgba(128, 128, 128, 0.534);
 }
 
-/* O HEADER COMEÇA AQUI */
+/* O HEADER COMEÇA AQUI // COPIAR À PARTIR DAQUI*/
 /* Zerando configurações padrão do BTS no botão hamburguer */
 
 .btnMenu {
@@ -88,7 +88,7 @@ body, .btn-outline-info {
   color: #fff;
   max-width: 160px;
   max-height: 165px;
-  background-color: rgba(17, 17, 17, 0.87);
+  background-color: rgba(17, 17, 17, 0.397);
   position: absolute;
   top: 75px;
   left: -250px;
@@ -134,6 +134,8 @@ body, .btn-outline-info {
     margin: 0 0 0 7px;
   }
 
+  /* O HEADER TEMRINA AQUI COPIAR ATÉ AQUI*/
+
   .title-signUp {
     color: #B2DDF7!important;
     /* text-transform: uppercase; */
@@ -146,28 +148,21 @@ body, .btn-outline-info {
     flex-direction: column;
     justify-content: center;
     height: 46em;
-    margin: 30px auto;
   }
 
   .formSignUp {
-    /* background-color: rgba(17, 17, 17, 0.295); */
     padding: auto;
-    margin-top: 80px;
-    margin-bottom: 40px;
   }
 
-  /* .with-linear-gradient {
-  border-style: solid;
-  border-width: 1px;
-  border-image: linear-gradient(45deg, #0076c0, #daf0fd) 1;
-} */
-
+/* ESTA É A ESTILIZAÇÃO DOS FORMULÁRIOS, OU SEJA, OS EFEITOS DE TRANSIÇÃO DO INPUT ESTÃO AQUI ! COPIEM */
+  
   .form-control, .form-select {
     border: 1px solid rgba(128, 128, 128, 0.425);
     border-radius: 0!important;
     background-color: rgba(17, 17, 17, 0.356);
     color: rgba(128, 128, 128, 0.658);
     box-shadow: none;
+    font-size: 12px;
   }
   
   input {
@@ -184,107 +179,37 @@ body, .btn-outline-info {
     background-color: rgba(17, 17, 17, 0.938);
   }
 
+  /* OS EFEITOS E ESTILIZAÇÃO DOS INPUTS TERMINAM AQUI// COPIAR ATÉ AQUI */
+
+  /* ESTILO DE RESPONSIVIDADE DO FOOTER PARA A LETRA FICAR PEQUENA NO MOBILE // COPIEM AQUI */
+
   h6 {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 18px!important;
+    font-size: 15px!important;
   }
-  
-
-/* O HEADER TEMRINA AQUI */
-
-/* EFFECT FORM ---------- COPIAR O INPUT A PARTIR DAQUI */
-
-/* *, *::before, *::after {
-  box-sizing: border-box;
-}
-
-.custom-field {
-  position: relative;
-  font-size: 14px;
-  margin: 0 14px 0 0;
-}
-.custom-field input {
-  border: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 4px;
-  max-width: 120px;
-  outline: none;
-  font-size: 14px;
-}
-
-.custom-field .placeholder {
-  position: absolute;
-  max-height: 3px;
-  max-width: 56px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgba(128, 128, 128, 0.596);
-  transition: 
-    top 0.3s ease,
-    color 0.3s ease,
-    font-size 0.3s ease;
-}
-
-.custom-field input.dirty + .placeholder,
-.custom-field input:valid + .placeholder,
-.custom-field input:focus + .placeholder {
-  top: 10px;
-  font-size: 10px;
-  color: #B2DDF7;
-}
-
-.custom-field.one input {
-  background: none;
-  border: 2px solid rgba(128, 128, 128, 0.336);
-  transition: border-color 0.3s ease;
-  color: #B2DDF7;
-}
-
-.custom-field.one input + .placeholder {
-  left: 10px;
-  padding: 0 10px 23px 7px;
-}
-
-.custom-field.one input.dirty,
-.custom-field.one input:valid,
-.custom-field.one input:focus {
-  border-color: #B2DDF7;
-  transition-delay: 0.1s;
-}
-
-.custom-field.one input.dirty + .placeholder,
-.custom-field.one input:valid + .placeholder,
-.custom-field.one input:focus + .placeholder {
-  top: 1px;
-  font-size: 14px;
-  color: #B2DDF7;
-  background: #212529;
-} */
-
-/* ATÉ AQUI */
+/* ESTILO DE RESPONSIVIDADE DO FOOTER P/ MOBILE TERMINA AQUI // COPIAR ATÉ AQUI */
 
 @media (min-width: 576px) {
+
+/* LOGO AUMENTA DE TAMANHO QUANDO A TELA AUMENTA / COPIEM AQUI */
 
   .logo {
     width: 190px;
     height: 80px;
   }
 
-  /* .custom-field input {
-  border: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 7px;
-  max-width: 190px;
-  outline: none;
-  font-size: 14px;
-  } */
+  /* LOGO AUMENTA DE TAMANHO QUANDO A TELA AUMENTA TERMINA AQUI / COPIEM ATÉ AQUI */
+
+ /* ESTILO DE RESPONSIVIDADE DO FOOTER PARA A LETRA VOLTAR AO NORMAL COM TELAS MAIORES // COPIEM AQUI */
+
+  h6 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px!important;
+  }
+
+  /* ESTILO DE RESPONSIVIDADE DO FOOTER PARA A LETRA VOLTAR AO NORMAL COM TELAS MAIORES TERMINA AQUI // COPIEM ATÉ AQUI */
 
   .navbar .buttonList li {
   padding: 0.8em 0.4em;
@@ -295,18 +220,25 @@ body, .btn-outline-info {
   .navbar .buttonList {
     max-width: 160px;
     max-height: 216px;
-    background-color: rgba(17, 17, 17, 0.87);
   }
 
-    .with-linear-gradient {
-  border-style: solid;
-  border-width: 1px;
-  border-image: linear-gradient(45deg, #0076c0, #daf0fd) 1;
-}
-
+.form-control, .form-select {
+    border: 1px solid rgba(128, 128, 128, 0.425);
+    border-radius: 0!important;
+    background-color: rgba(17, 17, 17, 0.356);
+    color: rgba(128, 128, 128, 0.658);
+    box-shadow: none;
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 769px){
+
+/* ESTILO DE RESPONSIVIDADE PARA FAZER O BOTÃO DE MENU SUMIR E A LISTA FLEX APARECER QUANDO A TELA AUMENTAR DE TAMANHO / COPIEM À PARTIR DAQUI */
+
+  .navbar {
+    margin-bottom: 40px;
+  }
   .btnMenu {
     display: none;
   }
@@ -346,6 +278,8 @@ body, .btn-outline-info {
     margin: 0 0 0 30px;
   }
 
+  /* ESTILO DE RESPONSIVIDADE PARA FAZER O BOTÃO DE MENU SUMIR E A LISTA FLEX APARECER QUANDO A TELA AUMENTAR DE TAMANHO TERMINA AQUI / COPIEM ATÉ AQUI */
+
   .title-signUp {
     color: #B2DDF7!important;
   }
@@ -357,14 +291,21 @@ body, .btn-outline-info {
     justify-content: center;
     margin: auto;
     height: 35em;
+    padding: 0;
   }
 
   .formSignUp {
     background-color: rgba(17, 17, 17, 0.295);
     padding: 0 25px 32px 25px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
+
+  .with-linear-gradient {
+  border-style: solid;
+  border-width: 1px;
+  border-image: linear-gradient(45deg, #0076c0, #daf0fd) 1;
+}
 
   .btn-outline-info {
   width: 100px;
@@ -372,14 +313,23 @@ body, .btn-outline-info {
   margin: 30px auto auto auto;
   border: solid 2px rgba(128, 128, 128, 0.534);
 }
+
+  footer {
+    margin-top: 40px;
+  }
 }
 
 
 @media (min-width: 1200px){
+
+  /* RESPONSIVIDADE PARA FAZER A LOGO AUMENTAR DE TAMANHO PARA A TELAS GRANDES / COPIEM AQUI */
+
   .logo {
     width: 250px;
     height: 100px;
   }
+
+  /* RESPONSIVIDADE PARA FAZER A LOGO AUMENTAR DE TAMANHO PARA A TELAS GRANDES TERMINA AQUI / COPIEM ATÉ AQUI */
 }
 
 </style>
@@ -388,30 +338,18 @@ body, .btn-outline-info {
 
 
 
-
-
-
-
-
 <!-- HTML -->
 
+<!-- ESTRUTURA HTML DO HEADER COMEÇA AQUI / COPIEM À PARTIR DAQUI -->
 <div class="container-fluid">
   <nav class="navbar navbar-dark bg-dark fixed-top">
 
     <button type="button" class="navbar-toggler btnMenu">
       <img src="align-left.png" alt="Menu" height="30px" width="32px">
     </button>
-
     <a href="#" class="navbar-brand navBrand">
       <img src="ResiliaflixLogo - Blue.png" class='logo' alt="Logo">
     </a>
-
-    <!-- ESTRUTURA HTML DOS INPUTS -->
-
-    <!-- <label class="custom-field one">
-      <input type="text" required/>
-      <span class="placeholder">Busca</span>
-    </label> -->
 
     <ul class="list-unstyled font-weight-bold buttonList">
 
@@ -439,69 +377,106 @@ body, .btn-outline-info {
         </li>
       </ul>
   </nav>
-  <!-- <div class="row">
-    <div class="col-12" style="height: 100px;"></div>
-  </div> -->
+
+ <!-- ESTRUTURA HTML DO HEADER TERMINA AQUI / COPIEM ATÉ AQUI -->
 
   
   <div class="container align-items-center signUp">
-    
   <form class="row g-4 needs-validation formSignUp with-linear-gradient" novalidate>
     <h2 class="title-signUp text-white text-center bold">Cadastro</h2>
-    <div class="col-md-5">
+    <div class="col-8 col-md-5">
       <label for="validationTooltip01" class="form-label text-white"></label>
       <input type="text" class="form-control" id="validationTooltip01" placeholder="Nome Completo" required>
-      <div class="valid-tooltip">
+      <div class="valid-feedback">
         Verificado!
       </div>
       <div class="invalid-feedback">
-        Digite seu nome.
+        Digite seu nome
       </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-4 col-md-2">
       <label for="validationCustom02" class="form-label text-white"></label>
       <input type="text" class="form-control" id="validationCustom02" placeholder="RG" required>
       <div class="valid-feedback">
         Verificado!
       </div>
       <div class="invalid-feedback">
-        Digite seu RG.
+        Digite seu RG
       </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-6 col-md-5">
       <label for="validationCustomUsername" class="form-label text-white"></label>
       <div class="input-group has-validation">
         <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="E-mail" required>
         <div class="invalid-feedback">
-          Digite seu E-mail.
+          Digite seu E-mail
         </div>
         <div class="valid-feedback">
           Verificado!
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-6 col-md-5">
       <label for="validationCustom03" class="form-label text-white"></label>
       <input type="text" class="form-control" id="validationCustom03" placeholder="Endereço" required>
       <div class="invalid-feedback">
-        Digite um endereço válido.
+        Digite um endereço válido
+      </div>
+      <div class="valid-feedback">
+        Verificado!
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-4 col-md-4">
+      <label for="validationCustom03" class="form-label text-white"></label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
+      <div class="invalid-feedback">
+        Digite uma cidade válida
+      </div>
+      <div class="valid-feedback">
+        Verificado!
+      </div> 
+    </div>
+    <div class="col-4 col-md-3">
       <label for="validationCustom04" class="form-label text-white"></label>
       <select class="form-select" id="validationCustom04" required>
         <option selected disabled value="">Estado</option>
         <option>...</option>
       </select>
       <div class="invalid-feedback">
-        Selecione um estado.
+        Selecione um estado
+      </div>
+      <div class="valid-feedback">
+        Verificado!
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-4 col-md-2">
       <label for="validationCustom05" class="form-label text-white"></label>
       <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
       <div class="invalid-feedback">
-        Digite um cep válido.
+        Digite um cep válido
+      </div>
+      <div class="valid-feedback">
+        Verificado!
+      </div>
+    </div>
+    <div class="col-6 col-md-5">
+      <label for="validationCustom05" class="form-label text-white"></label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Senha" required>
+      <div class="invalid-feedback">
+        Digite uma senha
+      </div>
+      <div class="valid-feedback">
+        Verificado!
+      </div>
+    </div>
+    <div class="col-6 col-md-5">
+      <label for="validationCustom05" class="form-label text-white"></label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Confirmação de Senha" required>
+      <div class="invalid-feedback">
+        Senha incorreta
+      </div>
+      <div class="valid-feedback">
+        Verificado!
       </div>
     </div>
     <div class="col-12">
@@ -511,7 +486,7 @@ body, .btn-outline-info {
           Li e concordo com os termos de uso.
         </label>
         <div class="invalid-feedback">
-          You must agree before submitting.
+          Você precisa concordar para continuar
         </div>
       </div>
     </div>
@@ -529,7 +504,7 @@ body, .btn-outline-info {
   <footer class="d-flex flex-direction-column align-itens-center justify-content-center">
     <div class="row">
       <div class="col-12 my-2">
-        <h6 class = 'text-center text-white lead '>resiliaflix - catálogo de fimes online</h6>
+        <h6 class = 'text-center text-white lead onlineFilms'>resiliaflix - catálogo de fimes online</h6>
       </div>
       <div class="col-12">
         <h6 class = 'text-center text-white lead'><small>©todos os direitos reservados</small></h6>
