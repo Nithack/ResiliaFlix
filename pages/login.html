@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <title>ResíliaFlix</title>
@@ -16,41 +18,552 @@
 
 
 
-    <header style="background-color: #111">
-
-        <!-- .container de alinhamento p/ header -->
-
-      <div class="container-fuid d-flex justify-content-between align-items-center">
-
-        <!-- logo -->
-
-        <img src="ResiliaflixLogo - Blue.svg" alt="" style="width: 230px; margin-left: 45px;">
-
-        <nav>
-
-          <ul class="list-unstyled d-flex">
-
-            <!-- Seta de voltar -->
-
-            <li><a href="#"><img src="left-arrow-64px.png" alt="" style="width: 35px; height: 35px; margin: 18px 45px 0 0;"></style></a></li>
-
-          </ul>
-
-        </nav>
-
-      </div>
-
-    </header>
-
-    <!-- Conteúdo do formulário -->
-
-    <section class="container-fluid bg-dark" style="width: 100%; height: calc(100vh - 69px);">
-
-    </section>
 
 
-    
+
+
+<!-- Estilização -->
+<style>
+
+/* Definindo padrão bg-dark do BTS para #1b1b1b */
+body {
+  background-color: #212529!important; 
+  font-family: 'Poppins', sans-serif;
+}
+
+body, .btn-outline-info {
+  background-color: #b2ddf700;
+  color: #fff;
+  transition: 0.9s;
+}
+
+.btn-outline-info:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #B2DDF7;
+  border-color: #0076c0;
+}
+
+.btn-outline-info {
+  width: 100px;
+  border-radius: 0!important;
+  margin: 30px auto auto auto;
+  box-shadow: none!important;
+  border: solid 2px rgba(128, 128, 128, 0.534);
+}
+
+/* O HEADER COMEÇA AQUI */
+/* Zerando configurações padrão do BTS no botão hamburguer */
+
+.btnMenu {
+  border: none!important;
+  -webkit-appearance: none!important;
+  -ms-appearance: none!important;
+  -moz-appearance: none!important;
+  appearance: none!important;
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1000;
+  max-height: 80px;
+  padding: 0 5px;
+}
+
+.navBrand {
+  flex-grow: 1;
+}
+
+.logo {
+  width: 170px;
+  height: 80px;
+}
+
+.navbar img {
+  padding: 1px;
+}
+
+ .navbar .buttonList {
+  color: #fff;
+  max-width: 160px;
+  max-height: 165px;
+  background-color: rgba(17, 17, 17, 0.87);
+  position: absolute;
+  top: 75px;
+  left: -250px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  transition: all 0.5s ease-in-out;
+  opacity: .5;
+} 
+
+.navbar.sidebar-open .buttonList {
+  left: -20px;
+  opacity: 1;
+  width: 250px;
+} 
+
+.navbar .buttonList li {
+  padding: 0.4em 0.4em;
+  margin: 0 0 0 28px;
+  cursor: pointer;
+}
+.navbar ul li a {
+  text-decoration: none!important;
+}
+.navbar ul li:hover {
+  color: #B2DDF7;
+}
+
+.flexList {
+  display: none;
+}
+
+#icon {
+  margin: 0 5px 5px 0;
+  padding: 2px;
+}
+
+.searchAndProfile {
+  display: flex!important;
+
+  }
+
+  #profile {
+    margin: 0 0 0 7px;
+  }
+
+  .title-signUp {
+    color: #B2DDF7!important;
+    /* text-transform: uppercase; */
+    font-weight: 300;
+  }
+
+  .signUp {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 46em;
+    margin: 30px auto;
+  }
+
+  .formSignUp {
+    /* background-color: rgba(17, 17, 17, 0.295); */
+    padding: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  /* .with-linear-gradient {
+  border-style: solid;
+  border-width: 1px;
+  border-image: linear-gradient(45deg, #0076c0, #daf0fd) 1;
+} */
+
+  .form-control, .form-select {
+    border: 1px solid rgba(128, 128, 128, 0.425);
+    border-radius: 0!important;
+    background-color: rgba(17, 17, 17, 0.356);
+    color: rgba(128, 128, 128, 0.658);
+    box-shadow: none;
+  }
   
+  input {
+    color: #fff!important;
+  }
+
+  .form-control:focus {
+    box-shadow: none!important;
+    background-color: rgba(17, 17, 17, 0.938);
+    transition: 0.9s;
+  }
+  .form-select:focus {
+    box-shadow: none!important;
+    background-color: rgba(17, 17, 17, 0.938);
+  }
+
+  h6 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px!important;
+  }
+  
+
+/* O HEADER TEMRINA AQUI */
+
+/* EFFECT FORM ---------- COPIAR O INPUT A PARTIR DAQUI */
+
+/* *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.custom-field {
+  position: relative;
+  font-size: 14px;
+  margin: 0 14px 0 0;
+}
+.custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 4px;
+  max-width: 120px;
+  outline: none;
+  font-size: 14px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  max-height: 3px;
+  max-width: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(128, 128, 128, 0.596);
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.custom-field input.dirty + .placeholder,
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+  top: 10px;
+  font-size: 10px;
+  color: #B2DDF7;
+}
+
+.custom-field.one input {
+  background: none;
+  border: 2px solid rgba(128, 128, 128, 0.336);
+  transition: border-color 0.3s ease;
+  color: #B2DDF7;
+}
+
+.custom-field.one input + .placeholder {
+  left: 10px;
+  padding: 0 10px 23px 7px;
+}
+
+.custom-field.one input.dirty,
+.custom-field.one input:valid,
+.custom-field.one input:focus {
+  border-color: #B2DDF7;
+  transition-delay: 0.1s;
+}
+
+.custom-field.one input.dirty + .placeholder,
+.custom-field.one input:valid + .placeholder,
+.custom-field.one input:focus + .placeholder {
+  top: 1px;
+  font-size: 14px;
+  color: #B2DDF7;
+  background: #212529;
+} */
+
+/* ATÉ AQUI */
+
+@media (min-width: 576px) {
+
+  .logo {
+    width: 190px;
+    height: 80px;
+  }
+
+  /* .custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 7px;
+  max-width: 190px;
+  outline: none;
+  font-size: 14px;
+  } */
+
+  .navbar .buttonList li {
+  padding: 0.8em 0.4em;
+  margin: 0 0 0 28px;
+  cursor: pointer;;
+}
+
+  .navbar .buttonList {
+    max-width: 160px;
+    max-height: 216px;
+    background-color: rgba(17, 17, 17, 0.87);
+  }
+
+    .with-linear-gradient {
+  border-style: solid;
+  border-width: 1px;
+  border-image: linear-gradient(45deg, #0076c0, #daf0fd) 1;
+}
+
+}
+
+@media (min-width: 769px){
+  .btnMenu {
+    display: none;
+  }
+
+  .navBrand {
+  flex-grow: 0;
+}
+
+  .navbar .buttonList li {
+  padding: 0.8em 0.4em;
+  margin: 0 0 0 28px;
+  cursor: pointer;
+  display: none;
+
+}
+
+  .custom-field {
+  display: none;
+}
+
+  .flexList {
+    width: 280px;
+    display: flex;
+    margin: 0 0 0 0;  
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  .searchAndProfile {
+  display: flex!important;
+  }
+
+  #profile {
+    margin: 0 0 0 30px;
+  }
+
+  .title-signUp {
+    color: #B2DDF7!important;
+  }
+
+  .signUp {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 35em;
+  }
+
+  .formSignUp {
+    background-color: rgba(17, 17, 17, 0.295);
+    padding: 0 25px 32px 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .btn-outline-info {
+  width: 100px;
+  border-radius: 0!important;
+  margin: 30px auto auto auto;
+  border: solid 2px rgba(128, 128, 128, 0.534);
+}
+}
+
+
+@media (min-width: 1200px){
+  .logo {
+    width: 250px;
+    height: 100px;
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+<!-- HTML -->
+
+<div class="container-fluid">
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+
+    <button type="button" class="navbar-toggler btnMenu">
+      <img src="align-left.png" alt="Menu" height="30px" width="32px">
+    </button>
+
+    <a href="#" class="navbar-brand navBrand">
+      <img src="ResiliaflixLogo - Blue.png" class='logo' alt="Logo">
+    </a>
+
+    <!-- ESTRUTURA HTML DOS INPUTS -->
+
+    <!-- <label class="custom-field one">
+      <input type="text" required/>
+      <span class="placeholder">Busca</span>
+    </label> -->
+
+    <ul class="list-unstyled font-weight-bold buttonList">
+
+      <li><a href="#" class="text-reset"><img src="home.png"  id='icon' width="23px" height="23px">Home</a></li>
+      <li><a href="#" class="text-reset"><img src="play.png"  id='icon' width="23px" height="23px">Filmes</a></li>
+      <li><a href="#" class="text-reset"><img src="information.png"  id='icon' width="23px" height="23px">Sobre</a></li>
+      <li><a href="#" class="text-reset"><img src="phone-call.png"  id='icon' width="23px" height="23px">Contato</a></li>
+  
+    </ul>
+
+    <ul class="list-unstyled font-weight-bold flexList flex-grow-1">
+
+      <li><a href="#" class="text-reset"><img src="home.png"  id='icon' width="23px" height="23px">Home</a></li>
+      <li><a href="#" class="text-reset"><img src="play.png"  id='icon' width="23px" height="23px">Filmes</a></li>
+      <li><a href="#" class="text-reset"><img src="information.png"  id='icon' width="23px" height="23px">Sobre</a></li>
+      <li><a href="#" class="text-reset"><img src="phone-call.png"  id='icon' width="23px" height="23px">Contato</a></li>
+    </ul>
+
+      <ul class="navbar-nav flex-grow-2 searchAndProfile d-flex flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="loupe.png" id='icon' width="33px" height="33px"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id ='profile' href="#"><img src="user.png" id='icon' width="30px" height="30px"></a>
+        </li>
+      </ul>
+  </nav>
+  <!-- <div class="row">
+    <div class="col-12" style="height: 100px;"></div>
+  </div> -->
+
+  
+  <div class="container align-items-center signUp">
+    
+  <form class="row g-4 needs-validation formSignUp with-linear-gradient" novalidate>
+    <h2 class="title-signUp text-white text-center bold">Cadastro</h2>
+    <div class="col-md-5">
+      <label for="validationTooltip01" class="form-label text-white"></label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Nome Completo" required>
+      <div class="valid-tooltip">
+        Verificado!
+      </div>
+      <div class="invalid-feedback">
+        Digite seu nome.
+      </div>
+    </div>
+    <div class="col-md-2">
+      <label for="validationCustom02" class="form-label text-white"></label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="RG" required>
+      <div class="valid-feedback">
+        Verificado!
+      </div>
+      <div class="invalid-feedback">
+        Digite seu RG.
+      </div>
+    </div>
+    <div class="col-md-5">
+      <label for="validationCustomUsername" class="form-label text-white"></label>
+      <div class="input-group has-validation">
+        <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="E-mail" required>
+        <div class="invalid-feedback">
+          Digite seu E-mail.
+        </div>
+        <div class="valid-feedback">
+          Verificado!
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label text-white"></label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Endereço" required>
+      <div class="invalid-feedback">
+        Digite um endereço válido.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom04" class="form-label text-white"></label>
+      <select class="form-select" id="validationCustom04" required>
+        <option selected disabled value="">Estado</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-feedback">
+        Selecione um estado.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label text-white"></label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
+      <div class="invalid-feedback">
+        Digite um cep válido.
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check text-white">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label text-white" for="invalidCheck">
+          Li e concordo com os termos de uso.
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+
+    <div class="row ms-0">
+      <div class="col-4"></div>
+    <div class="col-4 d-flex justify-content-center">
+      <button class="btn btn-outline-info" type="submit">Enviar</button>
+    </div>
+    <div class="col-4 ms-0"></div>
+  </div>
+  </form>
+  </div>
+
+  <footer class="d-flex flex-direction-column align-itens-center justify-content-center">
+    <div class="row">
+      <div class="col-12 my-2">
+        <h6 class = 'text-center text-white lead '>resiliaflix - catálogo de fimes online</h6>
+      </div>
+      <div class="col-12">
+        <h6 class = 'text-center text-white lead'><small>©todos os direitos reservados</small></h6>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+<!-- NÃO ESQUEÇAM DO JAVA SCRIPT DO BOTÃO HAMBURGUER ! COMEÇA AQUI -->
+
+  <script>
+
+    // Comando para fazer a lista aparecer no sideBar
+
+    const btn = document.querySelector ('.navbar-toggler');
+    const navbar = document.querySelector ('.navbar');
+
+    btn.addEventListener('click', e => {
+
+      navbar.classList.toggle('sidebar-open');
+
+    })
+
+
+  </script>
+
+<!-- SCRIPT DO BOTÃO HAMBURGUER TERMINA AQUI -->
+      
 
 
 
@@ -62,9 +575,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
-    -->
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script> -->
+   <script src="validation.js"></script>
   </body>
+
 </html>
+
+
+
+
+
