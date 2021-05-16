@@ -137,6 +137,14 @@ body {
       box-shadow: none;
       font-size: 12px;
     }
+
+    .form-select {
+        color: rgba(255, 255, 255, 0.479)!important;
+    }
+
+    .form-select option {
+        color: white!important;
+    }
     
     input {
       color: #fff!important;
@@ -159,9 +167,10 @@ body {
     h6 {
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 15px!important;
+      font-size: 13px!important;
+      font-weight: 100!important;
     }
-  
+
     footer {
       margin-top: 0;
       padding: 25px;
@@ -238,6 +247,21 @@ body {
     display: none;
   
   }
+
+  .navbar .buttonList {
+    color: #fff;
+    max-width: 160px;
+    max-height: 165px;
+    background-color: rgba(17, 17, 17, 0.397);
+    position: absolute;
+    top: 75px;
+    left: -250px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    transition: all 0.5s ease-in-out;
+    opacity: .5;
+    display: none;
+  } 
   
     .custom-field {
     display: none;
