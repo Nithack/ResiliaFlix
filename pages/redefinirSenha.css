@@ -192,11 +192,6 @@ body {
       font-weight: 100!important;
     }
 
-    #RedefinitionSuccess {
-      display: none;
-      text-align: center;
-    }
-
     footer {
       margin-top: 0;
       padding: 25px;
