@@ -4,31 +4,6 @@ body{
     font-family: 'Poppins', sans-serif
 }
 
-.main-btn {
-    background-color: #b2ddf7;
-    color: #212529;
-    text-transform: uppercase;
-    width: 200px;
-    height: 60px;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: 3px solid transparent;
-    transition: .5s;
-    display: inline-block;
-}
-
-.main-btn:hover{
-    text-decoration: none;
-    color: #709176;
-    background-color: transparent;
-    border-color: #8340A0;
-}
-
-.carousel-indicators .active{
-    background-color: #b2ddf7;
-
-}
-
 
 body, .btn-outline-info {
   background-color: #b2ddf700;
@@ -65,6 +40,16 @@ body, .btn-outline-info {
   z-index: 1000;
   max-height: 80px;
   padding: 0 5px;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;  
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .navBrand {
@@ -129,23 +114,66 @@ display: flex!important;
   #profile {
   margin: 0 0 0 7px;
   }
-    
-  h1{
-  text-align: center;
-  margin-top: 100px;
-  font-weight: 200;
-  color: #b2ddf7;
-  }
 
-  .imgCard {
-    max-width: 50px;
-    max-height: 50px;
-  }
+.Texts {
+  margin-top: 70px;
+  animation: fadeIn 2s;
+}
 
-  #photo {
-    width: 100px;
-    height: 100px;
-  }
+@keyframes fadeIn {
+    from {
+        opacity: 0;  
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Texts h1 {
+  font-size: 40px;
+  color: #B2DDF7;
+  margin-bottom: 20px;
+}
+
+#socialIcon {
+  margin: 0 7px;
+}
+  
+
+.Cards {
+  height: 200vh;
+  display: flex;
+  flex-direction: column!important;
+  margin-top: 35px;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;  
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.rowClass {
+  height: 300px;
+}
+
+h6 {
+  font-size: 13px!important;
+  font-weight: 100!important;
+}
+
+
+footer {
+  text-transform: uppercase;
+  padding: 25px;
+}
+
+
+  
 
 
 
@@ -166,6 +194,14 @@ display: flex!important;
             max-width: 160px;
             max-height: 216px;
           }
+        }
+
+        h6 {
+          font-size: 19px!important;
+        }
+
+        .Direitos {
+          font-size: 17px!important;
         }
         
       @media (min-width: 769px){
@@ -214,6 +250,13 @@ display: flex!important;
             margin: 30px auto auto auto;
             border: solid 2px rgba(128, 128, 128, 0.534);
           }
+
+          .Cards {
+            height: 60vh;
+            display: flex;
+            flex-direction: row!important;
+            margin-top: 35px;
+          }
           
             footer {
               margin-top: 0px;
@@ -226,5 +269,13 @@ display: flex!important;
                   width: 250px;
                   height: 100px;
                 }
+
+                .Cards {
+                  height: 70vh;
+                  display: flex;
+                  flex-direction: row!important;
+                  margin-top: 35px;
+                }
+
           }
       
