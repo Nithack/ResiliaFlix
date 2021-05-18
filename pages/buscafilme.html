@@ -12,7 +12,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-  <link href="./buscafilme.css" rel="stylesheet">
+  <link href="../css/buscafilme.css" rel="stylesheet">  
   <title>Resiliaflix - Busca</title>
 </head>
 
@@ -23,39 +23,39 @@
       <nav class="navbar navbar-dark fixed-top">
 
         <button type="button" class="navbar-toggler btnMenu">
-          <img src="align-left.png" alt="Menu" height="30px" width="32px">
+          <img src="../images/align-left.png" alt="Menu" height="30px" width="32px">
         </button>
         <a href="#" class="navbar-brand navBrand">
-          <img src="ResiliaflixLogo - Blue.png" class='logo' alt="Logo">
+          <img src="../images/ResiliaflixLog-Blue.png" class='logo' alt="Logo">
         </a>
 
         <ul class="list-unstyled font-weight-bold buttonList">
 
-          <li><a href="#" class="text-reset"><img src="home.png" id='icon' width="23px" height="23px">Home</a></li>
-          <li><a href="#" class="text-reset"><img src="play.png" id='icon' width="23px" height="23px">Filmes</a></li>
-          <li><a href="#" class="text-reset"><img src="information.png" id='icon' width="23px" height="23px">Sobre</a>
+          <li><a href="index.html" class="text-reset"><img src="../images/home.png" id='icon' width="23px" height="23px">Home</a></li>
+          <li><a href="index.html" class="text-reset"><img src="../images/play.png" id='icon' width="23px" height="23px">Filmes</a></li>
+          <li><a href="index.html" class="text-reset"><img src="../images/information.png" id='icon' width="23px" height="23px">Sobre</a>
           </li>
-          <li><a href="#" class="text-reset"><img src="phone-call.png" id='icon' width="23px" height="23px">Contato</a>
+          <li><a href="contato.html" class="text-reset"><img src="../images/phone-call.png" id='icon' width="23px" height="23px">Contato</a>
           </li>
 
         </ul>
 
         <ul class="list-unstyled font-weight-bold flexList flex-grow-1">
 
-          <li><a href="#" class="text-reset"><img src="home.png" id='icon' width="23px" height="23px">Home</a></li>
-          <li><a href="#" class="text-reset"><img src="play.png" id='icon' width="23px" height="23px">Filmes</a></li>
-          <li><a href="#" class="text-reset"><img src="information.png" id='icon' width="23px" height="23px">Sobre</a>
+          <li><a href="index.html" class="text-reset"><img src="../images/home.png" id='icon' width="23px" height="23px">Home</a></li>
+          <li><a href="index.html" class="text-reset"><img src="../images/play.png" id='icon' width="23px" height="23px">Filmes</a></li>
+          <li><a href="index.html" class="text-reset"><img src="../images/information.png" id='icon' width="23px" height="23px">Sobre</a>
           </li>
-          <li><a href="#" class="text-reset"><img src="phone-call.png" id='icon' width="23px" height="23px">Contato</a>
+          <li><a href="contato.html" class="text-reset"><img src="../images/phone-call.png" id='icon' width="23px" height="23px">Contato</a>
           </li>
         </ul>
 
         <ul class="navbar-nav flex-grow-2 searchAndProfile d-flex flex-row">
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="loupe.png" id='icon' width="33px" height="33px"></a>
+            <a class="nav-link" href="buscafilme.html"><img src="../images/loupe.png" id='icon' width="33px" height="33px"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id='profile' href="login.html"><img src="user.png" id='icon' width="30px" height="30px"></a>
+            <a class="nav-link" id='profile' href="login.html"><img src="../images/user.png" id='icon' width="30px" height="30px"></a>
           </li>
         </ul>
       </nav>
@@ -100,18 +100,6 @@
     </div>
   </footer>
 
-  <script>
-
-    // Comando para fazer a lista aparecer no sideBar
-
-    const btn = document.querySelector('.navbar-toggler');
-    const navbar = document.querySelector('.navbar');
-    btn.addEventListener('click', e => {
-      navbar.classList.toggle('sidebar-open');
-
-    })
-  </script>
-
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
@@ -119,6 +107,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/buscafilme.js"></script>
+  <script src="../js/sideBar.js"></script>
 
 
 </body>
