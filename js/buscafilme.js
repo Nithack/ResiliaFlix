@@ -1,4 +1,4 @@
-function buscar() {
+async function buscar() {
     let input = document.getElementById("movie").value;
     let inputM = document.getElementById("inputGroup");
     // inputM.style.display="flex";
@@ -7,26 +7,37 @@ function buscar() {
     let containerfluid = document.getElementById("containerp");
     containerfluid.style.height = "50px";
     let url = "http://www.omdbapi.com/?i=tt3896198&apikey=e8537246";
-    axios.get(url + "&t=" + input)
 
-        .then(function (response) {
-            console.log(response.data)
+    try {
+        const result = await axios.get(url + "&t=" + input)
+        if (result.data.Error) console.log('Filme não encontrado')
+        if (result.data.Title) {
             let image = document.getElementById("posterA");
-            image.setAttribute("src", response.data.Poster);
+            image.setAttribute("src", result.data.Poster);
             image.style.border = "none";
 
             let title = document.getElementById("title-p");
-            title.textContent = response.data.Title;
+            title.textContent = result.data.Title;
 
             let year = document.getElementById("year-p");
-            year.textContent = response.data.Year;
+            year.textContent = result.data.Year;
 
             let actor = document.getElementById("actor-p");
-            actor.textContent = response.data.Actors;
+            actor.textContent = result.data.Actors;
 
             let plot = document.getElementById("infos-p");
-            plot.textContent = response.data.Plot;
-        })
+            plot.textContent = result.data.Plot;
+        }
+        console.log(result)
+
+    } catch (error) {
+        console.log(error.message)
+    }
+
+
+    // .then(function (response) {
+    //     
+    // })
 
 }
 
