@@ -3,24 +3,26 @@
 
 body {
   background-color: #212529!important;
-    background-image: url(/images/fundo.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    font-family: 'Poppins', sans-serif;
+  background-image: url(/images/fundo.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
 }
 
-body, #button-addon2 {
+body, .btn-outline-info {
   background-color: #b2ddf700;
   color: #fff;
+  transition: 0.9s;
 }
 
-#button-addon2:hover {
+.btn-outline-info:hover {
   background-color: rgba(255, 255, 255, 0);
   color: #B2DDF7;
   border-color: #0076c0;
 }
 
-#button-addon2 {
+.btn-outline-info {
   width: 100px;
   border-radius: 0!important;
   box-shadow: none!important;
@@ -107,6 +109,17 @@ body, #button-addon2 {
     margin: 0 0 0 7px;
   }
 
+  #containerp {
+    margin-top:20px;
+    height: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    color: #fff!important;
+  }
+
   .form-center {
     position: initial;
     min-height: 100vh;
@@ -131,6 +144,14 @@ body, #button-addon2 {
     background-color: rgba(17, 17, 17, 0.938);
   }
 
+  #container-infos{
+    margin:40px auto;
+  }
+
+  #imgdiv{
+    margin-bottom: 20px;
+  }
+
   h6 {
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -138,11 +159,38 @@ body, #button-addon2 {
     font-weight: 100;
   }
 
-  .input-group {
-    padding: 0% 20%;
-}
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* position: absolute; */
+    bottom: 0;
+  }
+
 
 @media (min-width: 576px) {
+
+  #movie {
+    max-width: 500px;
+  }
+
+  #inputGroup {
+    display:flex;
+    justify-content: center;
+  }
+
+   img #posterA{
+    width: 300px;
+    height: 400px;
+    border: none!important;
+    box-shadow: none!important;
+  }
+
+  #imgdiv {
+    border: none!important;
+    box-shadow: none!important;
+  }
 
 
   .logo {
@@ -177,10 +225,6 @@ body, #button-addon2 {
     box-shadow: none;
     font-size: 17px;
   }
-
-  .input-group {
-    padding: 0% 20%;
-}
 }
 
 @media (min-width: 769px){
@@ -204,20 +248,16 @@ body, #button-addon2 {
 
 }
 
-  .custom-field {
-  display: none;
+.flexList {
+  width: 280px;
+  display: flex;
+  margin: 0 0 0 0;  
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
 }
-
-  .flexList {
-    width: 280px;
-    display: flex;
-    margin: 0 0 0 0;  
-    align-items: center;
-    justify-content: space-evenly;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 300;
-  }
   
   .searchAndProfile {
   display: flex!important;
@@ -230,40 +270,6 @@ body, #button-addon2 {
   .title-signUp {
     color: #B2DDF7!important;
   }
-
-  .signUp {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    height: 35em;
-    padding: 0;
-  }
-
-  .formSignUp {
-    background-color: rgba(17, 17, 17, 0.295);
-    padding: 0 25px 32px 25px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-
-  .with-linear-gradient {
-  border-style: solid;
-  border-width: 1px;
-  border-image: linear-gradient(45deg, #0076c0, #daf0fd) 1;
-}
-
-.input-group {
-    padding: 0% 20%;
-}
-
-  .btn-outline-info {
-  width: 100px;
-  border-radius: 0!important;
-  margin: 30px auto auto auto;
-  border: solid 2px rgba(128, 128, 128, 0.534);
-}
 
   footer {
     margin-top: 40px;
