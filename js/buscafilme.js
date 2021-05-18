@@ -3,6 +3,7 @@ function buscar() {
     let inputM = document.getElementById("inputGroup");
     // inputM.style.display="flex";
     inputM.style.justifyContent = "flex-end";
+    inputM.style.marginRight = "20px";
     let containerfluid = document.getElementById("containerp");
     containerfluid.style.height = "50px";
     let url = "http://www.omdbapi.com/?i=tt3896198&apikey=e8537246";
