@@ -160,6 +160,10 @@ body, .btn-outline-info {
     animation: fadeIn 1.1s;
   }
 
+  #container-erro {
+    margin: 40px auto;
+  }
+
   @keyframes fadeIn {
       from {
           opacity: 0;  

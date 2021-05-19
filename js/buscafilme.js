@@ -1,16 +1,14 @@
 async function buscar() {
     let input = document.getElementById("movie").value;
-    let inputM = document.getElementById("inputGroup");
-    // inputM.style.display="flex";
-    inputM.style.justifyContent = "flex-end";
-    inputM.style.marginRight = "20px";
     let containerfluid = document.getElementById("containerp");
     containerfluid.style.height = "50px";
     let url = "http://www.omdbapi.com/?i=tt3896198&apikey=e8537246";
 
     try {
         const result = await axios.get(url + "&t=" + input)
-        if (result.data.Error) console.log('Filme não encontrado')
+        if (result.data.Error) {
+            let valor = "Filme não disponível"
+            document.getElementById('error').innerText = valor}
         if (result.data.Title) {
             let image = document.getElementById("posterA");
             image.setAttribute("src", result.data.Poster);
