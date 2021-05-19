@@ -160,10 +160,11 @@ body, .btn-outline-info {
     animation: fadeIn 1.1s;
   }
 
-  #container-erro h2 {
+  #error {
     margin: 100px 0px 350px 0px;
     color: red;
     font-weight: 200;
+    display: none;
   }
 
   @keyframes fadeIn {
