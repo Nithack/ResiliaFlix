@@ -153,11 +153,17 @@ body, .btn-outline-info {
   }
   .form-select:focus {
     box-shadow: none!important;
-    background-color: rgba(17, 17, 17, 0.938);
+    background-color: rgba(5, 5, 5, 0.938);
   }
 
   #inputGroup {
     animation: fadeIn 1.1s;
+  }
+
+  #container-erro h2 {
+    margin: 100px 0px 350px 0px;
+    color: red;
+    font-weight: 200;
   }
 
   @keyframes fadeIn {
@@ -210,6 +216,12 @@ body, .btn-outline-info {
   #inputGroup {
     display:flex;
     justify-content: center;
+  }
+
+  #container-erro h2 {
+    margin: 100px 0px 100px 0px;
+    color: red;
+    font-weight: 200;
   }
 
    img #posterA{
