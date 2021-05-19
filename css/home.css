@@ -38,6 +38,16 @@ body {
     z-index: 1000;
     max-height: 80px;
     padding: 0 5px;
+    animation: fadeIn 2s;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;  
+      }
+      to {
+          opacity: 1;
+      }
   }
   
   .navBrand {
@@ -80,6 +90,7 @@ body {
   }
   .navbar ul li a {
     text-decoration: none!important;
+    font-weight: 100!important;
   }
   .navbar ul li:hover {
     color: #B2DDF7;
