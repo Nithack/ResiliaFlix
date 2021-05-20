@@ -1,4 +1,6 @@
-async function buscar() {
+if (!localStorage.busca=="")busca(localStorage.busca);
+async function buscar(element) {
+    if(element==undefined)console.log("no element");
     let input = document.getElementById("movie").value;
     let containerfluid = document.getElementById("containerp");
     containerfluid.style.height = "50px";
@@ -47,6 +49,7 @@ async function buscar() {
             <h2 id="error"></h2>
           </div>`;
         }
+        localStorage.busca="";
         console.log(result)
     } catch (error) {
         console.log(error.message)
