@@ -162,16 +162,26 @@ display: flex!important;
 }
 
 h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   font-size: 13px!important;
   font-weight: 100!important;
 }
 
-
 footer {
-  text-transform: uppercase;
+  margin-top: 0;
   padding: 25px;
+  animation: fadeIn 2s;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;  
+    }
+    to {
+        opacity: 1;
+    }
+}
 
   
 
@@ -197,12 +207,11 @@ footer {
         }
 
         h6 {
-          font-size: 19px!important;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 18px!important;
         }
-
-        .Direitos {
-          font-size: 17px!important;
-        }
+      
         
       @media (min-width: 769px){
           .navbar {
@@ -258,11 +267,6 @@ footer {
             margin-top: 35px;
           }
           
-            footer {
-              margin-top: 0px;
-              padding: 25px;
-              font-weight: 100px;
-            }
       }
           @media (min-width: 1200px){
               .logo {
