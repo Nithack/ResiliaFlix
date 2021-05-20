@@ -219,11 +219,8 @@ body, .btn-outline-info {
     justify-content: center;
   }
 
-  #container-erro {
-    margin: 100px 0px 350px 0px;
-  }
-
-  #container-erro h2{
+  #container-erro h2 {
+    margin: 100px 0px 100px 0px;
     color: red;
     font-weight: 200;
   }
@@ -328,15 +325,6 @@ body, .btn-outline-info {
     color: #B2DDF7!important;
   }
 
-  #container-erro {
-    margin: 100px 0px 100px 0px;
-  }
-
-  #container-erro h2{
-    color: red;
-    font-weight: 200;
-  }
-
   footer {
     margin-top: 40px;
   }
@@ -348,9 +336,5 @@ body, .btn-outline-info {
   .logo {
     width: 250px;
     height: 100px;
-  }
-
-  #container-erro {
-    margin: 200px 0px 200px 0px;
   }
 }

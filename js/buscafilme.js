@@ -11,6 +11,23 @@ async function buscar() {
         if (result.data.Error) {
             let errorFilm = document.getElementById('error');
             errorFilm.style.display = 'initial';
+            let valor = "Filme não disponível"
+            document.getElementById('container-infos').innerHTML = `<div class="row justify-content-center align-items-center">
+            
+            <div class="col-12 col-sm-6 d-flex justify-content-center align-items-center" id="imgdiv">
+            <img id="posterA">
+            </div>
+            
+            <div class="col-12 col-sm-6">
+              <h3 id="title-p"></h3>
+              <h5 class="mb-3" id="year-p"></h5>
+              <h5 class="lead mb-2" id="actor-p"></h5>
+              <h5 class="lead" id="infos-p"></h5>
+              </div>
+      
+              
+              </div>`;
+            document.getElementById('error').innerText = valor
         }
 
         if (result.data.Title) {
@@ -25,7 +42,10 @@ async function buscar() {
             actor.textContent = result.data.Actors;
             let plot = document.getElementById("infos-p");
             plot.textContent = result.data.Plot;
-            document.getElementById('container-erro').style.margin="0px";
+            document.getElementById('container-erro').style.margin = "0px";
+            document.getElementById('container-erro').innerHTML = `<div class="container-fluid d-flex justify-content-center align-items-center">
+            <h2 id="error"></h2>
+          </div>`;
         }
         console.log(result)
     } catch (error) {
