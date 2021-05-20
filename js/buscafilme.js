@@ -9,8 +9,8 @@ async function buscar() {
         if (result.data.Error) console.log('Filme não encontrado');
 
         if (result.data.Error) {
-            let valor = "Filme não disponível"
-            document.getElementById('error').innerText = valor
+            let errorFilm = document.getElementById('error');
+            errorFilm.style.display = 'initial';
         }
 
         if (result.data.Title) {
