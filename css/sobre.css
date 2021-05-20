@@ -108,22 +108,80 @@ body, .btn-outline-info {
     margin: 0 0 0 7px;
   }
 
-
   h6 {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 15px!important;
+    font-size: 13px!important;
     font-weight: 100!important;
   }
 
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    margin-top: 0;
     padding: 25px;
+    animation: fadeIn 2s;
   }
 
+  @keyframes fadeIn {
+      from {
+          opacity: 0;  
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+ 
+
+  #resiliaflix-1 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #resi-pic {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  #pic {
+    width: 65%;
+    margin-top: 40px;
+  }
+
+  #resi-info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #212529a8;
+  }
+
+  #resi-title{
+    font-size: 30px;
+    font-weight: 200;
+  }
+  #first-p {
+    padding: 29px 0px 16px 0px;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.5;
+  }
+
+  #ter-p{
+    padding: 20px 0px 16px 0px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 100;
+  }
+
+  #sec-p{
+    font-size: 15px;
+    font-weight: 100;
+  }
 
 @media (min-width: 576px) {
 
@@ -131,6 +189,60 @@ body, .btn-outline-info {
   .logo {
     width: 190px;
     height: 80px;
+  }
+
+  #resiliaflix-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #resi-pic {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #pic {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  #resi-info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: #212529a8;
+  }
+
+  #resi-title{
+    font-size: 30px;
+    font-weight: 200;
+  }
+  #first-p {
+    padding: 29px 0px 16px 0px;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.5;
+  }
+
+  #ter-p{
+    padding: 20px 0px 16px 0px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 100;
+  }
+
+  #sec-p{
+    font-size: 19px;
+    font-weight: 100;
+
   }
 
 
@@ -198,6 +310,53 @@ body, .btn-outline-info {
     color: #B2DDF7!important;
   }
 
+ #resiliaflix-1 {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+
+  #pic {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .with-linear-gradient {
+    border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(45deg, #0076c0, #daf0fd) 1;
+  }
+
+  #resi-info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #212529a8;
+  }
+
+  #resi-title{
+    font-size: 30px;
+  }
+  #first-p {
+    padding: 29px 0px 16px 0px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  #ter-p{
+    padding: 20px 0px 16px 0px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  #sec-p{
+    font-size: 15px;
+  }
+
 
   footer {
     margin-top: 40px;
@@ -210,5 +369,54 @@ body, .btn-outline-info {
   .logo {
     width: 250px;
     height: 100px;
+  }
+
+  #resi-pic {
+    margin-right: -157px;
+    margin-left: -12px;
+  }
+
+  #resiliaflix-1 {
+    display: flex;
+    flex-direction: row;
+    place-content: center space-evenly;
+    align-items: center;
+    justify-content: center;
+    }
+
+  #pic {
+    width: 70%;
+    margin-top: 40px;
+  }
+
+  #resi-info {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #212529a8;
+    width: 763px;
+    border-radius: 10px;
+  }
+
+  #resi-title{
+    font-size: 30px;
+  }
+  #first-p {
+    padding: 29px 0px 16px 0px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  #ter-p{
+    padding: 20px 0px 16px 0px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  #sec-p{
+    font-size: 20px;
   }
 }
