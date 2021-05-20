@@ -1,7 +1,7 @@
-if (!localStorage.busca=="")busca(localStorage.busca);
+if (!localStorage.busca == "") buscar(localStorage.busca);
 async function buscar(element) {
-    if(element==undefined)console.log("no element");
-    let input = document.getElementById("movie").value;
+    if (element == undefined) console.log("no element");
+    let input = element || document.getElementById("movie").value;
     let containerfluid = document.getElementById("containerp");
     containerfluid.style.height = "50px";
     let url = "http://www.omdbapi.com/?i=tt3896198&apikey=e8537246";
@@ -49,7 +49,7 @@ async function buscar(element) {
             <h2 id="error"></h2>
           </div>`;
         }
-        localStorage.busca="";
+        localStorage.busca = "";
         console.log(result)
     } catch (error) {
         console.log(error.message)
