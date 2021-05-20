@@ -25,6 +25,7 @@ async function buscar() {
             actor.textContent = result.data.Actors;
             let plot = document.getElementById("infos-p");
             plot.textContent = result.data.Plot;
+            document.getElementById('container-erro').style.margin="0px";
         }
         console.log(result)
     } catch (error) {
