@@ -124,6 +124,12 @@ body,
     box-shadow: none;
     font-size: 12px;
 }
+.carousel-control-prev {
+    width: 45px;
+}
+.carousel-control-next {
+    width: 45px;
+}
 .accordion-button {
     color: white;
     background-color: #39393a;
