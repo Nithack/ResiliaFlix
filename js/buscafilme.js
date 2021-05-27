@@ -4,7 +4,7 @@ async function buscar(element) {
     let input = element || document.getElementById("movie").value;
     let containerfluid = document.getElementById("containerp");
     containerfluid.style.height = "50px";
-    let url = "http://www.omdbapi.com/?i=tt3896198&apikey=e8537246";
+    let url = "https://www.omdbapi.com/?i=tt3896198&apikey=e8537246";
 
     try {
         const result = await axios.get(url + "&t=" + input)
